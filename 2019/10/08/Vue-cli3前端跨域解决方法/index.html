@@ -6,18 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/10 | Hexo</title>
+  <title>Vue-cli3+axios前端跨域解决方法 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="预买桂花同载酒,终不似,少年游。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/10/index.html">
+  <meta name="description" content="配置BaseUrl 首先在main.js中，配置下我们访问的Url前缀：  1234import axios  from &amp;apos;axios&amp;apos;Vue.prototype.$axios = axiosaxios.defaults.baseURL = &amp;apos;/api&amp;apos;axios.defaults.headers.post[&amp;apos;Content-Type&amp;apos;">
+<meta name="keywords" content="vue-cli,axios">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue-cli3+axios前端跨域解决方法">
+<meta property="og:url" content="http://yoursite.com/2019/10/08/Vue-cli3前端跨域解决方法/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="预买桂花同载酒,终不似,少年游。">
+<meta property="og:description" content="配置BaseUrl 首先在main.js中，配置下我们访问的Url前缀：  1234import axios  from &amp;apos;axios&amp;apos;Vue.prototype.$axios = axiosaxios.defaults.baseURL = &amp;apos;/api&amp;apos;axios.defaults.headers.post[&amp;apos;Content-Type&amp;apos;">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/images/1.png">
+<meta property="og:updated_time" content="2019-10-08T09:40:54.794Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="预买桂花同载酒,终不似,少年游。">
+<meta name="twitter:title" content="Vue-cli3+axios前端跨域解决方法">
+<meta name="twitter:description" content="配置BaseUrl 首先在main.js中，配置下我们访问的Url前缀：  1234import axios  from &amp;apos;axios&amp;apos;Vue.prototype.$axios = axiosaxios.defaults.baseURL = &amp;apos;/api&amp;apos;axios.defaults.headers.post[&amp;apos;Content-Type&amp;apos;">
+<meta name="twitter:image" content="http://yoursite.com/images/1.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -139,36 +143,54 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Vue-cli3前端跨域解决方法" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/08/Vue-cli3前端跨域解决方法/" class="archive-article-date">
-  	<time datetime="2019-10-08T08:58:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/08/Vue-cli3前端跨域解决方法/">Vue-cli3+axios前端跨域解决方法</a>
+    <h1 class="article-title" itemprop="name">
+      Vue-cli3+axios前端跨域解决方法
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/10/08/Vue-cli3前端跨域解决方法/" class="archive-article-date">
+  	<time datetime="2019-10-08T08:58:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>配置BaseUrl<br> 首先在main.js中，配置下我们访问的Url前缀：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import axios  from &apos;axios&apos;</span><br><span class="line">Vue.prototype.$axios = axios</span><br><span class="line">axios.defaults.baseURL = &apos;/api&apos;</span><br><span class="line">axios.defaults.headers.post[&apos;Content-Type&apos;] = &apos;application/json&apos;;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li><p>在 package.json 文件的同级目录下创建 vue.config.js 文件<br>  <img src="/images/1.png" alt></p>
+</li>
+<li><p>配置代理<br> 修改 vue.config.js 中 devServer 子节点内容，添加一个 proxy：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">    devServer: &#123;</span><br><span class="line">        proxy: &#123;</span><br><span class="line">            &apos;/api&apos;: &#123;</span><br><span class="line">                target: &apos;https://news-at.zhihu.com/api&apos;, //API服务器的地址</span><br><span class="line">                changeOrigin: true,</span><br><span class="line">                pathRewrite: &#123;</span><br><span class="line">                    &apos;^/api&apos;: &apos;&apos;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改请求Url<br> 修改axios请求，把url修改如下：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">this.$axios.get(&apos;4/news/latest&apos;)</span><br><span class="line">.then(result=&gt;&#123;</span><br><span class="line">console.log(result)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重启项目</p>
+</li>
+</ul>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>因为我们给url加上了前缀 /api，我们访问 <a href="http://127.0.0.1:8080/4/news/latest" target="_blank" rel="noopener">http://127.0.0.1:8080/4/news/latest</a> 就当于访问了：<a href="http://127.0.0.1:8080/api/4/news/latest。" target="_blank" rel="noopener">http://127.0.0.1:8080/api/4/news/latest。</a>(假设本地访问端口号为 8080)</p>
+<p>又因为在 index.js 中的 proxy 中拦截了 /api ,并把 /api 及其前面的所有替换成了 target 中的内容，因此实际访问 Url 是<a href="https://news-at.zhihu.com/api/4/news/latest。" target="_blank" rel="noopener">https://news-at.zhihu.com/api/4/news/latest。</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -184,57 +206,119 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/08/Vue-cli3前端跨域解决方法/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/08/Hexo-yilia相关设置/" class="archive-article-date">
-  	<time datetime="2019-10-07T17:58:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-08</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/08/Hexo-yilia相关设置/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hexo yilia主题相关设置</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/08/Hexo-yilia相关设置/">Hexo yilia主题相关设置</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Vscode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#原理"><span class="toc-number">1.</span> <span class="toc-text">原理</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -257,8 +341,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
