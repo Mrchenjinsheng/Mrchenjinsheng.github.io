@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Vue搜索历史实现 | Hexo</title>
+  <title>使用bus.js进行组件间简单通信 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="转载自此处 1234567891011121314151617searchHistory() &amp;#123;    this.input = this.input.trim() // 清除空格    if (this.searchHistoryItem.length &amp;gt; 0) &amp;#123; // 有数据的话 判断        if (this.searchHistoryItem.indexO">
-<meta name="keywords" content="Vue">
+  <meta name="description" content="建立一个bus.js  在bus.js写入下面的信息 12import Vue from &amp;apos;vue&amp;apos;export default new Vue  在需要向外传递数据的组件中引入bus.js 12./bus.js为组件和bus.js的相对路径import $bus from &amp;apos;./bus.js&amp;apos;  向外传递数据 12345bus() &amp;#123;    /">
+<meta name="keywords" content="vue,bus.js,组件通信">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue搜索历史实现">
-<meta property="og:url" content="http://yoursite.com/2019/10/10/Vue搜索历史实现/index.html">
+<meta property="og:title" content="使用bus.js进行组件间简单通信">
+<meta property="og:url" content="http://yoursite.com/2019/10/10/使用bus.js进行组件间简单通信/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="转载自此处 1234567891011121314151617searchHistory() &amp;#123;    this.input = this.input.trim() // 清除空格    if (this.searchHistoryItem.length &amp;gt; 0) &amp;#123; // 有数据的话 判断        if (this.searchHistoryItem.indexO">
+<meta property="og:description" content="建立一个bus.js  在bus.js写入下面的信息 12import Vue from &amp;apos;vue&amp;apos;export default new Vue  在需要向外传递数据的组件中引入bus.js 12./bus.js为组件和bus.js的相对路径import $bus from &amp;apos;./bus.js&amp;apos;  向外传递数据 12345bus() &amp;#123;    /">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-10T05:54:35.247Z">
+<meta property="og:updated_time" content="2019-10-10T15:55:37.770Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue搜索历史实现">
-<meta name="twitter:description" content="转载自此处 1234567891011121314151617searchHistory() &amp;#123;    this.input = this.input.trim() // 清除空格    if (this.searchHistoryItem.length &amp;gt; 0) &amp;#123; // 有数据的话 判断        if (this.searchHistoryItem.indexO">
+<meta name="twitter:title" content="使用bus.js进行组件间简单通信">
+<meta name="twitter:description" content="建立一个bus.js  在bus.js写入下面的信息 12import Vue from &amp;apos;vue&amp;apos;export default new Vue  在需要向外传递数据的组件中引入bus.js 12./bus.js为组件和bus.js的相对路径import $bus from &amp;apos;./bus.js&amp;apos;  向外传递数据 12345bus() &amp;#123;    /">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -141,28 +141,45 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Vue搜索历史实现" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-使用bus.js进行组件间简单通信" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Vue搜索历史实现
+      使用bus.js进行组件间简单通信
     </h1>
   
 
         
-        <a href="/2019/10/10/Vue搜索历史实现/" class="archive-article-date">
-  	<time datetime="2019-10-10T05:47:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
+        <a href="/2019/10/10/使用bus.js进行组件间简单通信/" class="archive-article-date">
+  	<time datetime="2019-10-10T15:37:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://blog.csdn.net/Ajaxguan/article/details/83036681" target="_blank" rel="noopener">转载自此处</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">searchHistory() &#123;</span><br><span class="line">    this.input = this.input.trim() // 清除空格</span><br><span class="line">    if (this.searchHistoryItem.length &gt; 0) &#123; // 有数据的话 判断</span><br><span class="line">        if (this.searchHistoryItem.indexOf(this.input) !== -1) &#123; // 有相同的，先删除 再添加 </span><br><span class="line">        this.searchHistoryItem.splice(this.searchHistoryItem.indexOf(this.input), 1)</span><br><span class="line">        this.searchHistoryItem.unshift(this.input)</span><br><span class="line">        &#125; else &#123; // 没有相同的 添加</span><br><span class="line">        this.searchHistoryItem.unshift(this.input)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; else &#123; // 没有数据 添加</span><br><span class="line">        this.searchHistoryItem.unshift(this.input)</span><br><span class="line">    &#125;</span><br><span class="line">    if (this.searchHistoryItem.length &gt; 6) &#123; // 保留六个值</span><br><span class="line">        this.searchHistoryItem.pop()</span><br><span class="line">    &#125;</span><br><span class="line">    localStorage.setItem(&apos;searchHistoryItem&apos;, JSON.stringify(this.searchHistoryItem))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <ol>
+<li><p>建立一个bus.js</p>
+</li>
+<li><p>在bus.js写入下面的信息</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &apos;vue&apos;</span><br><span class="line">export default new Vue</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在需要向外传递数据的组件中引入bus.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./bus.js为组件和bus.js的相对路径</span><br><span class="line">import $bus from &apos;./bus.js&apos;</span><br></pre></td></tr></table></figure>
+
+<p>向外传递数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">bus() &#123;</span><br><span class="line">    //&apos;transmit&apos;是定义的变量</span><br><span class="line">    // data是要传递的数据集合</span><br><span class="line">    $bus.$emit(&quot;transmit&quot;,data)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在需要引入数据的组件引入bus.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&apos;./bus.js&apos;为组件和bus.js的相对路径</span><br><span class="line">import $bus from &apos;./bus.js&apos;</span><br></pre></td></tr></table></figure>
+
+<p>获取数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$bus.$on(&apos;transmitMusic&apos;,data=&gt;&#123;</span><br><span class="line">    //&apos;transmit&apos;是定义的变量</span><br><span class="line">    // data是要获取的数据集合</span><br><span class="line">    console.log(data)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+</ol>
+
       
 
       
@@ -175,7 +192,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">bus.js</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">组件通信</a>
         		</li>
       		
 		</ul>
@@ -231,7 +256,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/10/Vue搜索历史实现/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/10/使用bus.js进行组件间简单通信/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -245,18 +270,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/10/使用bus.js进行组件间简单通信/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          使用bus.js进行组件间简单通信
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/10/08/Vue-cli3前端跨域解决方法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Vue-cli3+axios前端跨域解决方法</div>
+    <a href="/2019/10/10/Vue搜索历史实现/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Vue搜索历史实现</div>
       <i class="icon-circle-right"></i>
     </a>
   
