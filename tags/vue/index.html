@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>Tag: Vue | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="预买桂花同载酒,终不似,少年游。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/Vue/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="预买桂花同载酒,终不似,少年游。">
 <meta property="og:locale" content="zh-Hans">
@@ -141,35 +141,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Vue搜索历史实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/10/10/Vue搜索历史实现/" class="archive-article-date">
+  	<time datetime="2019-10-10T05:47:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/10/Vue搜索历史实现/">Vue搜索历史实现</a>
+      <a class="archive-article-title" href="/2019/10/10/Vue搜索历史实现/">Vue搜索历史实现</a>
     </h1>
   
 
-        
-        <a href="/2019/10/10/Vue搜索历史实现/" class="archive-article-date">
-  	<time datetime="2019-10-10T05:47:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://blog.csdn.net/Ajaxguan/article/details/83036681" target="_blank" rel="noopener">转载自此处</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">searchHistory() &#123;</span><br><span class="line">    this.input = this.input.trim() // 清除空格</span><br><span class="line">    if (this.searchHistoryItem.length &gt; 0) &#123; // 有数据的话 判断</span><br><span class="line">        if (this.searchHistoryItem.indexOf(this.input) !== -1) &#123; // 有相同的，先删除 再添加 </span><br><span class="line">        this.searchHistoryItem.splice(this.searchHistoryItem.indexOf(this.input), 1)</span><br><span class="line">        this.searchHistoryItem.unshift(this.input)</span><br><span class="line">        &#125; else &#123; // 没有相同的 添加</span><br><span class="line">        this.searchHistoryItem.unshift(this.input)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; else &#123; // 没有数据 添加</span><br><span class="line">        this.searchHistoryItem.unshift(this.input)</span><br><span class="line">    &#125;</span><br><span class="line">    if (this.searchHistoryItem.length &gt; 6) &#123; // 保留六个值</span><br><span class="line">        this.searchHistoryItem.pop()</span><br><span class="line">    &#125;</span><br><span class="line">    localStorage.setItem(&apos;searchHistoryItem&apos;, JSON.stringify(this.searchHistoryItem))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -181,201 +180,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/10/Vue搜索历史实现/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-Vue-cli3前端跨域解决方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/08/Vue-cli3前端跨域解决方法/">Vue-cli3+axios前端跨域解决方法</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/08/Vue-cli3前端跨域解决方法/" class="archive-article-date">
-  	<time datetime="2019-10-08T08:58:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>配置BaseUrl<br> 首先在main.js中，配置下我们访问的Url前缀：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import axios  from &apos;axios&apos;</span><br><span class="line">Vue.prototype.$axios = axios</span><br><span class="line">axios.defaults.baseURL = &apos;/api&apos;</span><br><span class="line">axios.defaults.headers.post[&apos;Content-Type&apos;] = &apos;application/json&apos;;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">axios</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/08/Vue-cli3前端跨域解决方法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Hexo-yilia相关设置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/08/Hexo-yilia相关设置/">Hexo yilia主题相关设置</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/08/Hexo-yilia相关设置/" class="archive-article-date">
-  	<time datetime="2019-10-07T17:58:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="主题下载并启用"><a href="#主题下载并启用" class="headerlink" title="主题下载并启用"></a>主题下载并启用</h2><p>进入命令行，下载yilia主题，输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
-
-<p>修改站点配置文件 _config.yml，找到如下代码：</p>
-<p>Themes: <a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a><br>theme: landscape<br>将 landscape 修改为yilia即可。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Vscode</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/08/Hexo-yilia相关设置/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -397,10 +214,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
@@ -497,6 +314,20 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             </button>
 
             <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>)">
             </button>
 
             <div class="pswp__caption">
