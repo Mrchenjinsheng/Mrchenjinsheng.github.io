@@ -6,22 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Vue-cli3+axios前端跨域解决方法 | Hexo</title>
+  <title>Hbuild打包app后返回键退出整个应用 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="配置BaseUrl 首先在main.js中，配置下我们访问的Url前缀：  1234import axios  from &amp;apos;axios&amp;apos;Vue.prototype.$axios = axiosaxios.defaults.baseURL = &amp;apos;/api&amp;apos;axios.defaults.headers.post[&amp;apos;Content-Type&amp;apos;">
-<meta name="keywords" content="vue,axios">
+  <meta name="description" content="1234567891011121314151617181920212223&amp;lt;script&amp;gt;    document.addEventListener(&amp;apos;plusready&amp;apos;, function(a) &amp;#123; //等待plus ready后再调用5+ API：        //// 在这里调用5+ API        var first = null;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue-cli3+axios前端跨域解决方法">
-<meta property="og:url" content="http://yoursite.com/2019/10/08/Vue-cli3前端跨域解决方法/index.html">
+<meta property="og:title" content="Hbuild打包app后返回键退出整个应用">
+<meta property="og:url" content="http://yoursite.com/2019/10/29/Hbuild打包app后返回键退出整个i应用/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="配置BaseUrl 首先在main.js中，配置下我们访问的Url前缀：  1234import axios  from &amp;apos;axios&amp;apos;Vue.prototype.$axios = axiosaxios.defaults.baseURL = &amp;apos;/api&amp;apos;axios.defaults.headers.post[&amp;apos;Content-Type&amp;apos;">
+<meta property="og:description" content="1234567891011121314151617181920212223&amp;lt;script&amp;gt;    document.addEventListener(&amp;apos;plusready&amp;apos;, function(a) &amp;#123; //等待plus ready后再调用5+ API：        //// 在这里调用5+ API        var first = null;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/images/1.png">
-<meta property="og:updated_time" content="2019-10-10T05:55:35.197Z">
+<meta property="og:updated_time" content="2019-10-29T09:56:01.842Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue-cli3+axios前端跨域解决方法">
-<meta name="twitter:description" content="配置BaseUrl 首先在main.js中，配置下我们访问的Url前缀：  1234import axios  from &amp;apos;axios&amp;apos;Vue.prototype.$axios = axiosaxios.defaults.baseURL = &amp;apos;/api&amp;apos;axios.defaults.headers.post[&amp;apos;Content-Type&amp;apos;">
-<meta name="twitter:image" content="http://yoursite.com/images/1.png">
+<meta name="twitter:title" content="Hbuild打包app后返回键退出整个应用">
+<meta name="twitter:description" content="1234567891011121314151617181920212223&amp;lt;script&amp;gt;    document.addEventListener(&amp;apos;plusready&amp;apos;, function(a) &amp;#123; //等待plus ready后再调用5+ API：        //// 在这里调用5+ API        var first = null;">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -133,47 +130,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Vue-cli3前端跨域解决方法" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Hbuild打包app后返回键退出整个i应用" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Vue-cli3+axios前端跨域解决方法
+      Hbuild打包app后返回键退出整个应用
     </h1>
   
 
         
-        <a href="/2019/10/08/Vue-cli3前端跨域解决方法/" class="archive-article-date">
-  	<time datetime="2019-10-08T08:58:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-08</time>
+        <a href="/2019/10/29/Hbuild打包app后返回键退出整个i应用/" class="archive-article-date">
+  	<time datetime="2019-10-29T09:54:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>配置BaseUrl<br> 首先在main.js中，配置下我们访问的Url前缀：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import axios  from &apos;axios&apos;</span><br><span class="line">Vue.prototype.$axios = axios</span><br><span class="line">axios.defaults.baseURL = &apos;/api&apos;</span><br><span class="line">axios.defaults.headers.post[&apos;Content-Type&apos;] = &apos;application/json&apos;;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<a id="more"></a>
-<ul>
-<li><p>在 package.json 文件的同级目录下创建 vue.config.js 文件<br>  <img src="/images/1.png" alt></p>
-</li>
-<li><p>配置代理<br> 修改 vue.config.js 中 devServer 子节点内容，添加一个 proxy：</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">    devServer: &#123;</span><br><span class="line">        proxy: &#123;</span><br><span class="line">            &apos;/api&apos;: &#123;</span><br><span class="line">                target: &apos;https://news-at.zhihu.com/api&apos;, //API服务器的地址</span><br><span class="line">                changeOrigin: true,</span><br><span class="line">                pathRewrite: &#123;</span><br><span class="line">                    &apos;^/api&apos;: &apos;&apos;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改请求Url<br> 修改axios请求，把url修改如下：</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">this.$axios.get(&apos;4/news/latest&apos;)</span><br><span class="line">.then(result=&gt;&#123;</span><br><span class="line">console.log(result)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重启项目</p>
-</li>
-</ul>
-<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>因为我们给url加上了前缀 /api，我们访问 <a href="http://127.0.0.1:8080/4/news/latest" target="_blank" rel="noopener">http://127.0.0.1:8080/4/news/latest</a> 就当于访问了：<a href="http://127.0.0.1:8080/api/4/news/latest。" target="_blank" rel="noopener">http://127.0.0.1:8080/api/4/news/latest。</a>(假设本地访问端口号为 8080)</p>
-<p>又因为在 index.js 中的 proxy 中拦截了 /api ,并把 /api 及其前面的所有替换成了 target 中的内容，因此实际访问 Url 是<a href="https://news-at.zhihu.com/api/4/news/latest。" target="_blank" rel="noopener">https://news-at.zhihu.com/api/4/news/latest。</a></p>
-
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    document.addEventListener(&apos;plusready&apos;, function(a) &#123; //等待plus ready后再调用5+ API：</span><br><span class="line">        //// 在这里调用5+ API</span><br><span class="line">        var first = null;</span><br><span class="line">        plus.key.addEventListener(&apos;backbutton&apos;, function() &#123; //监听返回键</span><br><span class="line">                //首次按键，提示‘再按一次退出应用’</span><br><span class="line">                if (!first) &#123;</span><br><span class="line">                    first = new Date().getTime(); //获取第一次点击的时间戳</span><br><span class="line">                    // console.log(&apos;再按一次退出应用&apos;);//用自定义toast提示最好</span><br><span class="line">                    // toast(&apos;双击返回键退出应用&apos;); //调用自己写的吐丝提示 函数</span><br><span class="line">                    //plus.nativeUI.toast(&quot;双击退出&quot;, &#123;duration:&apos;short&apos;&#125;); //通过H5+ API 调用Android 上的toast 提示框</span><br><span class="line">                    javascript:history.back()  //实现单击返回功能</span><br><span class="line">                    setTimeout(function() &#123;</span><br><span class="line">                        first = null;</span><br><span class="line">                    &#125;, 1000);</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    if (new Date().getTime() - first &lt; 1000) &#123; //获取第二次点击的时间戳, 两次之差 小于 1000ms 说明1s点击了两次,</span><br><span class="line">                        plus.runtime.quit(); //双击退出应用</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;, false);</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -181,21 +158,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">axios</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -246,7 +208,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/08/Vue-cli3前端跨域解决方法/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/29/Hbuild打包app后返回键退出整个i应用/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -260,18 +222,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/10/Vue搜索历史实现/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/10/29/Hbuild打包app后返回键退出整个应用/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Vue搜索历史实现
+          Hbuild打包app后返回键退出整个应用
         
       </div>
     </a>
   
   
-    <a href="/2019/10/08/Hexo-yilia相关设置/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo yilia主题相关设置</div>
+    <a href="/2019/10/10/使用bus.js进行组件间简单通信/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用bus.js进行组件间简单通信</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -298,7 +260,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#原理"><span class="toc-number">1.</span> <span class="toc-text">原理</span></a></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>

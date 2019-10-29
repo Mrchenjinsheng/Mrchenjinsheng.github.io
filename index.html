@@ -131,6 +131,130 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Hbuild打包app后返回键退出整个应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/29/Hbuild打包app后返回键退出整个应用/">Hbuild打包app后返回键退出整个应用</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/29/Hbuild打包app后返回键退出整个应用/" class="archive-article-date">
+  	<time datetime="2019-10-29T09:54:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/29/Hbuild打包app后返回键退出整个应用/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Hbuild打包app后返回键退出整个i应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/29/Hbuild打包app后返回键退出整个i应用/">Hbuild打包app后返回键退出整个应用</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/29/Hbuild打包app后返回键退出整个i应用/" class="archive-article-date">
+  	<time datetime="2019-10-29T09:54:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    document.addEventListener(&apos;plusready&apos;, function(a) &#123; //等待plus ready后再调用5+ API：</span><br><span class="line">        //// 在这里调用5+ API</span><br><span class="line">        var first = null;</span><br><span class="line">        plus.key.addEventListener(&apos;backbutton&apos;, function() &#123; //监听返回键</span><br><span class="line">                //首次按键，提示‘再按一次退出应用’</span><br><span class="line">                if (!first) &#123;</span><br><span class="line">                    first = new Date().getTime(); //获取第一次点击的时间戳</span><br><span class="line">                    // console.log(&apos;再按一次退出应用&apos;);//用自定义toast提示最好</span><br><span class="line">                    // toast(&apos;双击返回键退出应用&apos;); //调用自己写的吐丝提示 函数</span><br><span class="line">                    //plus.nativeUI.toast(&quot;双击退出&quot;, &#123;duration:&apos;short&apos;&#125;); //通过H5+ API 调用Android 上的toast 提示框</span><br><span class="line">                    javascript:history.back()  //实现单击返回功能</span><br><span class="line">                    setTimeout(function() &#123;</span><br><span class="line">                        first = null;</span><br><span class="line">                    &#125;, 1000);</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    if (new Date().getTime() - first &lt; 1000) &#123; //获取第二次点击的时间戳, 两次之差 小于 1000ms 说明1s点击了两次,</span><br><span class="line">                        plus.runtime.quit(); //双击退出应用</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;, false);</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/29/Hbuild打包app后返回键退出整个i应用/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-使用bus.js进行组件间简单通信" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -238,8 +362,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://blog.csdn.net/Ajaxguan/article/details/83036681" target="_blank" rel="noopener">转载自此处</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">searchHistory() &#123;</span><br><span class="line">    this.input = this.input.trim() // 清除空格</span><br><span class="line">    if (this.searchHistoryItem.length &gt; 0) &#123; // 有数据的话 判断</span><br><span class="line">        if (this.searchHistoryItem.indexOf(this.input) !== -1) &#123; // 有相同的，先删除 再添加 </span><br><span class="line">        this.searchHistoryItem.splice(this.searchHistoryItem.indexOf(this.input), 1)</span><br><span class="line">        this.searchHistoryItem.unshift(this.input)</span><br><span class="line">        &#125; else &#123; // 没有相同的 添加</span><br><span class="line">        this.searchHistoryItem.unshift(this.input)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; else &#123; // 没有数据 添加</span><br><span class="line">        this.searchHistoryItem.unshift(this.input)</span><br><span class="line">    &#125;</span><br><span class="line">    if (this.searchHistoryItem.length &gt; 6) &#123; // 保留六个值</span><br><span class="line">        this.searchHistoryItem.pop()</span><br><span class="line">    &#125;</span><br><span class="line">    localStorage.setItem(&apos;searchHistoryItem&apos;, JSON.stringify(this.searchHistoryItem))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">searchHistory() &#123;</span><br><span class="line">    this.input = this.input.trim() // 清除空格</span><br><span class="line">    if (this.searchHistoryItem.length &gt; 0) &#123; // 有数据的话 判断</span><br><span class="line">        if (this.searchHistoryItem.indexOf(this.input) !== -1) &#123; // 有相同的，先删除 再添加 </span><br><span class="line">        this.searchHistoryItem.splice(this.searchHistoryItem.indexOf(this.input), 1)</span><br><span class="line">        this.searchHistoryItem.unshift(this.input)</span><br><span class="line">        &#125; else &#123; // 没有相同的 添加</span><br><span class="line">        this.searchHistoryItem.unshift(this.input)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; else &#123; // 没有数据 添加</span><br><span class="line">        this.searchHistoryItem.unshift(this.input)</span><br><span class="line">    &#125;</span><br><span class="line">    if (this.searchHistoryItem.length &gt; 6) &#123; // 保留六个值</span><br><span class="line">        this.searchHistoryItem.pop()</span><br><span class="line">    &#125;</span><br><span class="line">    localStorage.setItem(&apos;searchHistoryItem&apos;, JSON.stringify(this.searchHistoryItem))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://blog.csdn.net/Ajaxguan/article/details/83036681" target="_blank" rel="noopener">来源</a></p>
+
       
 
       
@@ -530,11 +656,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Vscode</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color1">axios</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -546,11 +676,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">axios</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+                <a href="javascript:void(0)" class="js-tag color2">Vscode</a>
               </li>
             
             <div class="clearfix"></div>
