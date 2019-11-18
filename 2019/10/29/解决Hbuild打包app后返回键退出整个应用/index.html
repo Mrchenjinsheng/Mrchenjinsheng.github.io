@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: Vscode | Hexo</title>
+  <title>解决Hbuild打包app后返回键退出整个应用 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="预买桂花同载酒,终不似,少年游。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/Vscode/index.html">
+  <meta name="description" content="1234567891011121314151617181920212223&amp;lt;script&amp;gt;    document.addEventListener(&amp;apos;plusready&amp;apos;, function(a) &amp;#123; //等待plus ready后再调用5+ API：        //// 在这里调用5+ API        var first = null;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解决Hbuild打包app后返回键退出整个应用">
+<meta property="og:url" content="http://yoursite.com/2019/10/29/解决Hbuild打包app后返回键退出整个应用/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="预买桂花同载酒,终不似,少年游。">
+<meta property="og:description" content="1234567891011121314151617181920212223&amp;lt;script&amp;gt;    document.addEventListener(&amp;apos;plusready&amp;apos;, function(a) &amp;#123; //等待plus ready后再调用5+ API：        //// 在这里调用5+ API        var first = null;">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-29T10:02:32.300Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="预买桂花同载酒,终不似,少年游。">
+<meta name="twitter:title" content="解决Hbuild打包app后返回键退出整个应用">
+<meta name="twitter:description" content="1234567891011121314151617181920212223&amp;lt;script&amp;gt;    document.addEventListener(&amp;apos;plusready&amp;apos;, function(a) &amp;#123; //等待plus ready后再调用5+ API：        //// 在这里调用5+ API        var first = null;">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -129,60 +130,156 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-解决Hbuild打包app后返回键退出整个应用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/08/Hexo-yilia相关设置/" class="archive-article-date">
-  	<time datetime="2019-10-07T17:58:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-08</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/08/Hexo-yilia相关设置/">Hexo yilia主题相关设置</a>
+    <h1 class="article-title" itemprop="name">
+      解决Hbuild打包app后返回键退出整个应用
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Vscode</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        <a href="/2019/10/29/解决Hbuild打包app后返回键退出整个应用/" class="archive-article-date">
+  	<time datetime="2019-10-29T09:54:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    document.addEventListener(&apos;plusready&apos;, function(a) &#123; //等待plus ready后再调用5+ API：</span><br><span class="line">        //// 在这里调用5+ API</span><br><span class="line">        var first = null;</span><br><span class="line">        plus.key.addEventListener(&apos;backbutton&apos;, function() &#123; //监听返回键</span><br><span class="line">                //首次按键，提示‘再按一次退出应用’</span><br><span class="line">                if (!first) &#123;</span><br><span class="line">                    first = new Date().getTime(); //获取第一次点击的时间戳</span><br><span class="line">                    // console.log(&apos;再按一次退出应用&apos;);//用自定义toast提示最好</span><br><span class="line">                    // toast(&apos;双击返回键退出应用&apos;); //调用自己写的吐丝提示 函数</span><br><span class="line">                    //plus.nativeUI.toast(&quot;双击退出&quot;, &#123;duration:&apos;short&apos;&#125;); //通过H5+ API 调用Android 上的toast 提示框</span><br><span class="line">                    javascript:history.back()  //实现单击返回</span><br><span class="line">                    setTimeout(function() &#123;</span><br><span class="line">                        first = null;</span><br><span class="line">                    &#125;, 1000);</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    if (new Date().getTime() - first &lt; 1000) &#123; //获取第二次点击的时间戳, 两次之差 小于 1000ms 说明1s点击了两次,</span><br><span class="line">                        plus.runtime.quit(); //双击退出应用</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;, false);</span><br><span class="line">    &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+      
 
-          
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/29/解决Hbuild打包app后返回键退出整个应用/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/11/08/原型和原型链/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          原型和原型链
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2019/10/10/使用bus.js进行组件间简单通信/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用bus.js进行组件间简单通信</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    目录，不存在的…
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -205,9 +302,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

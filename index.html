@@ -131,19 +131,188 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Hbuild打包app后返回键退出整个应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-十大经典排序算法-带动图演示" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/29/Hbuild打包app后返回键退出整个应用/">Hbuild打包app后返回键退出整个应用</a>
+      <a class="article-title" href="/2019/11/13/十大经典排序算法-带动图演示/">十大经典排序算法(带动图演示)</a>
     </h1>
   
 
         
-        <a href="/2019/10/29/Hbuild打包app后返回键退出整个应用/" class="archive-article-date">
+        <a href="/2019/11/13/十大经典排序算法-带动图演示/" class="archive-article-date">
+  	<time datetime="2019-11-13T09:58:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="算法概述"><a href="#算法概述" class="headerlink" title="算法概述"></a>算法概述</h2><ol>
+<li>算法分类<br>十种常见排序算法可以分为两大类<ol>
+<li><strong>非线性时间比较类排序：</strong>通过比较来决定元素间的相对次序，由于其时间复杂度不能突破O(nlogn)，因此称为非线性时间比较类排序。</li>
+<li><strong>线性时间非比较类排序：</strong>不通过比较来决定元素间的相对次序，它可以突破基于比较排序的时间下界，以线性时间运行，因此称为线性时间非比较类排序。</li></ol></li></ol>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">排序算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/13/十大经典排序算法-带动图演示/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-原型和原型链" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/08/原型和原型链/">原型和原型链</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/08/原型和原型链/" class="archive-article-date">
+  	<time datetime="2019-11-08T09:55:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h2><h4 id="四个概念"><a href="#四个概念" class="headerlink" title="四个概念"></a>四个概念</h4><ul>
+<li><p>js分为<strong>函数对象</strong>和<strong>普通对象</strong>，每个对象都有__proto__属性,但只有函数对象才有prototype属性</p>
+</li>
+<li><p>Object、Function都是js内置的<strong>函数</strong> ，类似的还有Array、RegExp、Date、Boolean、Number、String</p>
+</li>
+<li><p>属性__proto__是一个对象，它有两个属性，constructor和__proto__</p>
+</li>
+<li><p>原型对象prototype有一个默认的constructor属性，用于记录实例时由哪个构造函数创建</p>
+</li>
+</ul>
+<h4 id="两个准则"><a href="#两个准则" class="headerlink" title="两个准则"></a>两个准则</h4><ul>
+<li>原型对象的constructor指向构造函数本身</li>
+<li>实例的__proto__和原型对象指向同一个地方</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="keyword">let</span> fn1 = <span class="keyword">new</span> Foo()</span><br><span class="line"><span class="keyword">let</span> fn2 = <span class="keyword">new</span> Foo()</span><br><span class="line">fn1.__proto__ = Foo.prototype	<span class="comment">//准则2</span></span><br><span class="line">fn2.__proto__ = Foo.prototype	<span class="comment">//准则2</span></span><br><span class="line">Foo.prototype.__proto__  = <span class="built_in">Object</span>.prototype	<span class="comment">//准则2(Foo.prototype本质也是普通对象)</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.__proto__ = <span class="literal">null</span>	<span class="comment">//原型链到此停止</span></span><br><span class="line">Foo.prototype.constructor = Foo    <span class="comment">//准则1</span></span><br><span class="line">Foo.__proto__ = <span class="built_in">Function</span>.prototype    <span class="comment">//准则2</span></span><br><span class="line"><span class="built_in">Function</span>.prototype.__proto__ = <span class="built_in">Object</span>.prototype    <span class="comment">//准则2(Function.prototype本质也是普通对象)</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.__proto__ = <span class="literal">null</span>    <span class="comment">//原型链到此停止</span></span><br></pre></td></tr></table></figure>
+
+<p>由此得出结论：除Object的原型对象(Object.prototype)的<strong>proto</strong>指向null，其他内置函数对象的原型对象和自定义构造函数的<strong>proto</strong>都指向Object.prototype,因未原型对象本身时普通对象。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.prototype.__proto__ = <span class="literal">null</span></span><br><span class="line"><span class="built_in">Array</span>.prototype.__proto__ = <span class="built_in">Object</span>.prototype;</span><br><span class="line">Foo.prototype.__proto__  = <span class="built_in">Object</span>.prototype;</span><br></pre></td></tr></table></figure>
+
+<h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/08/原型和原型链/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-解决Hbuild打包app后返回键退出整个应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/29/解决Hbuild打包app后返回键退出整个应用/">解决Hbuild打包app后返回键退出整个应用</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/29/解决Hbuild打包app后返回键退出整个应用/" class="archive-article-date">
   	<time datetime="2019-10-29T09:54:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-29</time>
 </a>
         
@@ -163,7 +332,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/29/Hbuild打包app后返回键退出整个应用/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/10/29/解决Hbuild打包app后返回键退出整个应用/">展开全文 >></a>
         </p>
       
 
@@ -594,11 +763,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Vscode</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color2">bus.js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">组件通信</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -610,11 +783,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">bus.js</a>
+                <a href="javascript:void(0)" class="js-tag color5">排序算法</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">组件通信</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Vscode</a>
               </li>
             
             <div class="clearfix"></div>
